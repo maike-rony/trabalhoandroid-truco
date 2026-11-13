@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/tvTitulo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvLabelPlayer1"
+        android:id="@+id/tvRotuloJogador1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -30,10 +30,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo" />
 
     <EditText
-        android:id="@+id/etPlayer1"
+        android:id="@+id/etJogador1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -43,10 +43,10 @@
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvLabelPlayer1" />
+        app:layout_constraintTop_toBottomOf="@id/tvRotuloJogador1" />
 
     <TextView
-        android:id="@+id/tvLabelPlayer2"
+        android:id="@+id/tvRotuloJogador2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -55,10 +55,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etPlayer1" />
+        app:layout_constraintTop_toBottomOf="@id/etJogador1" />
 
     <EditText
-        android:id="@+id/etPlayer2"
+        android:id="@+id/etJogador2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -68,10 +68,10 @@
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvLabelPlayer2" />
+        app:layout_constraintTop_toBottomOf="@id/tvRotuloJogador2" />
 
     <Button
-        android:id="@+id/btnComecar"
+        android:id="@+id/botaoComecar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -79,6 +79,6 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etPlayer2" />
+        app:layout_constraintTop_toBottomOf="@id/etJogador2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

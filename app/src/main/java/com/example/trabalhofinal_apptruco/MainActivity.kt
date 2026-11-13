@@ -13,26 +13,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val etPlayer1 = findViewById<EditText>(R.id.etPlayer1)
-        val etPlayer2 = findViewById<EditText>(R.id.etPlayer2)
-        val btnComecar = findViewById<Button>(R.id.btnComecar)
+        val etJogador1 = findViewById<EditText>(R.id.etJogador1)
+        val etJogador2 = findViewById<EditText>(R.id.etJogador2)
+        val botaoComecar = findViewById<Button>(R.id.botaoComecar)
 
-        fun updateButtonState() {
-            val p1 = etPlayer1.text.toString().trim()
-            val p2 = etPlayer2.text.toString().trim()
-            btnComecar.isEnabled = p1.isNotEmpty() && p2.isNotEmpty()
+        fun atualizarEstadoBotao() {
+            val textoJogador1 = etJogador1.text.toString().trim()
+            val textoJogador2 = etJogador2.text.toString().trim()
+            botaoComecar.isEnabled = textoJogador1.isNotEmpty() && textoJogador2.isNotEmpty()
         }
 
-        updateButtonState()
+        atualizarEstadoBotao()
 
-        etPlayer1.doOnTextChanged { _, _, _, _ -> updateButtonState() }
-        etPlayer2.doOnTextChanged { _, _, _, _ -> updateButtonState() }
+        etJogador1.doOnTextChanged { _, _, _, _ -> atualizarEstadoBotao() }
+        etJogador2.doOnTextChanged { _, _, _, _ -> atualizarEstadoBotao() }
 
-        btnComecar.setOnClickListener {
-            val player1Name = etPlayer1.text.toString().trim()
-            val player2Name = etPlayer2.text.toString().trim()
+        botaoComecar.setOnClickListener {
+            val nomeJogador1 = etJogador1.text.toString().trim()
+            val nomeJogador2 = etJogador2.text.toString().trim()
 
-            if (player1Name.equals(player2Name, ignoreCase = true)) {
+            if (nomeJogador1.equals(nomeJogador2, ignoreCase = true)) {
                 Toast.makeText(
                     this,
                     getString(R.string.erro_nomes_iguais),
@@ -41,11 +41,11 @@ class MainActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val intent = Intent(this, TelaInicialJogo::class.java).apply {
-                putExtra("EXTRA_PLAYER_1", player1Name)
-                putExtra("EXTRA_PLAYER_2", player2Name)
+            val intentNavegacao = Intent(this, TelaInicialJogo::class.java).apply {
+                putExtra("EXTRA_JOGADOR_1", nomeJogador1)
+                putExtra("EXTRA_JOGADOR_2", nomeJogador2)
             }
-            startActivity(intent)
+            startActivity(intentNavegacao)
         }
     }
 }

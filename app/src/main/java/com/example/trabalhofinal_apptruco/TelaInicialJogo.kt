@@ -9,13 +9,13 @@ class TelaInicialJogo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_inicial_jogo)
 
-        val player1Name = intent.getStringExtra("EXTRA_PLAYER_1")?.takeIf { it.isNotBlank() } ?: "Jogador 1"
-        val player2Name = intent.getStringExtra("EXTRA_PLAYER_2")?.takeIf { it.isNotBlank() } ?: "Jogador 2"
+        val nomeJogador1 = intent.getStringExtra("EXTRA_JOGADOR_1")?.takeIf { it.isNotBlank() } ?: "Jogador 1"
+        val nomeJogador2 = intent.getStringExtra("EXTRA_JOGADOR_2")?.takeIf { it.isNotBlank() } ?: "Jogador 2"
 
-        val tvJogador1Header = findViewById<TextView>(R.id.tvJogador1Header)
-        val tvJogador2Header = findViewById<TextView>(R.id.tvJogador2Header)
+        val tvCabecalhoJogador1 = findViewById<TextView>(R.id.tvCabecalhoJogador1)
+        val tvCabecalhoJogador2 = findViewById<TextView>(R.id.tvCabecalhoJogador2)
 
-        tvJogador1Header.text = getString(R.string.jogador_pontos_format, player1Name, "00")
-        tvJogador2Header.text = getString(R.string.jogador_pontos_format, player2Name, "00")
+        tvCabecalhoJogador1.text = getString(R.string.jogador_pontos_format, nomeJogador1, "00")
+        tvCabecalhoJogador2.text = getString(R.string.jogador_pontos_format, nomeJogador2, "00")
     }
 }
