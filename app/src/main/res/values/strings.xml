@@ -9,7 +9,7 @@
     <string name="erro_nomes_iguais">Coloque nomes diferentes</string>
     <string name="tela_inicial_jogo_titulo">Tela Inicial do Jogo</string>
     <string name="jogadores_partida">%1$s VS %2$s</string>
-    <string name="jogador_pontos_format">%1$s: %2$s</string>
+    <string name="jogador_pontos_format">%1$s: %2$s pts - Falta: %3$d</string>
     <string name="btn_mais_1">+1</string>
     <string name="btn_mais_3">+3</string>
     <string name="btn_mais_6">+6</string>

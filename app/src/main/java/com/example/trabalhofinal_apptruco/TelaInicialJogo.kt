@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import java.util.Locale
+import kotlin.math.max
 
 class TelaInicialJogo : AppCompatActivity() {
 
@@ -83,8 +84,10 @@ class TelaInicialJogo : AppCompatActivity() {
     private fun atualizarPlacar() {
         val textoPontos1 = String.format(Locale.getDefault(), "%02d", pontosJogador1)
         val textoPontos2 = String.format(Locale.getDefault(), "%02d", pontosJogador2)
-        tvCabecalhoJogador1.text = getString(R.string.jogador_pontos_format, nomeJogador1, textoPontos1)
-        tvCabecalhoJogador2.text = getString(R.string.jogador_pontos_format, nomeJogador2, textoPontos2)
+        val falta1 = max(0, 12 - pontosJogador1)
+        val falta2 = max(0, 12 - pontosJogador2)
+        tvCabecalhoJogador1.text = getString(R.string.jogador_pontos_format, nomeJogador1, textoPontos1, falta1)
+        tvCabecalhoJogador2.text = getString(R.string.jogador_pontos_format, nomeJogador2, textoPontos2, falta2)
     }
 
     private fun adicionarPontosJogador1(pontos: Int) {
@@ -130,6 +133,8 @@ class TelaInicialJogo : AppCompatActivity() {
     private fun zerarHistorico() {
         pontosJogador1 = 0
         pontosJogador2 = 0
+        vitoriasJogador1 = 0
+        vitoriasJogador2 = 0
         atualizarPlacar()
     }
 }
