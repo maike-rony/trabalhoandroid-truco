@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Trabalho Final - APP Truco</string>
+    <string name="app_name">APP Truco UTFPR</string>
     <string name="nome_jogador_01">Nome do Jogador 01</string>
     <string name="nome_jogador_02">Nome do Jogador 02</string>
     <string name="hint_jogador_01">Digite o nome do Jogador 1</string>
