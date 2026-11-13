@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Final Project - Truco App</string>
+    <string name="app_name">APP Truco UTFPR</string>
     <string name="nome_jogador_01">Player 01 Name</string>
     <string name="nome_jogador_02">Player 02 Name</string>
     <string name="hint_jogador_01">Enter Player 1 name</string>
@@ -9,12 +9,18 @@
     <string name="erro_nomes_iguais">Please enter different names</string>
     <string name="tela_inicial_jogo_titulo">Game Initial Screen</string>
     <string name="jogadores_partida">%1$s VS %2$s</string>
-    <string name="jogador_pontos_format">%1$s: %2$s pts - Missing: %3$d</string>
+    <string name="jogador_nome_pontos_format">%1$s: %2$d</string>
+    <string name="jogador_falta_format">Missing: %1$d</string>
     <string name="btn_mais_1">+1</string>
     <string name="btn_mais_3">+3</string>
     <string name="btn_mais_6">+6</string>
     <string name="btn_mais_9">+9</string>
     <string name="btn_mais_12">+12</string>
+    <string name="btn_menos_1">-1</string>
+    <string name="btn_menos_3">-3</string>
+    <string name="btn_menos_6">-6</string>
+    <string name="btn_menos_9">-9</string>
+    <string name="btn_menos_12">-12</string>
     <string name="btn_hist_jogadas">Move History</string>
     <string name="btn_zerar_historico">Reset History</string>
     <string name="btn_inf_nomes">Enter Names</string>

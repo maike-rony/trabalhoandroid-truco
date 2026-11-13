@@ -27,18 +27,32 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- JOGADOR 1 HEADER -->
         <TextView
             android:id="@+id/tvCabecalhoJogador1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvTituloJogoTruco"
-            tools:text="Jogador 1: 00" />
+            tools:text="Jogador 1: 0" />
 
+        <!-- JOGADOR 1 FALTA -->
+        <TextView
+            android:id="@+id/tvFaltaJogador1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/truco_cinza_claro"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCabecalhoJogador1"
+            tools:text="Falta: 12" />
+
+        <!-- JOGADOR 1 BOTOES MAIS (+1, +3, +6, +9, +12) -->
         <Button
             android:id="@+id/botaoJ1Mais1"
             android:layout_width="0dp"
@@ -51,7 +65,7 @@
             app:layout_constraintEnd_toStartOf="@+id/botaoJ1Mais3"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvCabecalhoJogador1" />
+            app:layout_constraintTop_toBottomOf="@id/tvFaltaJogador1" />
 
         <Button
             android:id="@+id/botaoJ1Mais3"
@@ -97,21 +111,97 @@
             android:text="@string/btn_mais_12"
             android:textColor="@color/truco_cinza_claro"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/botaoJ1Mais9"
+            app:layout_constraintStart_toEndOf="@+id/botaoJ1Mais9"
             app:layout_constraintTop_toTopOf="@id/botaoJ1Mais1" />
 
+        <!-- JOGADOR 1 BOTOES MENOS (-1, -3, -6, -9, -12) -->
+        <Button
+            android:id="@+id/botaoJ1Menos1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="@color/truco_superficie_cinza"
+            android:text="@string/btn_menos_1"
+            android:textColor="@color/truco_cinza_claro"
+            app:layout_constraintEnd_toStartOf="@+id/botaoJ1Menos3"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/botaoJ1Mais1" />
+
+        <Button
+            android:id="@+id/botaoJ1Menos3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="@color/truco_superficie_cinza"
+            android:text="@string/btn_menos_3"
+            android:textColor="@color/truco_cinza_claro"
+            app:layout_constraintEnd_toStartOf="@+id/botaoJ1Menos6"
+            app:layout_constraintStart_toEndOf="@+id/botaoJ1Menos1"
+            app:layout_constraintTop_toTopOf="@id/botaoJ1Menos1" />
+
+        <Button
+            android:id="@+id/botaoJ1Menos6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="@color/truco_superficie_cinza"
+            android:text="@string/btn_menos_6"
+            android:textColor="@color/truco_cinza_claro"
+            app:layout_constraintEnd_toStartOf="@+id/botaoJ1Menos9"
+            app:layout_constraintStart_toEndOf="@+id/botaoJ1Menos3"
+            app:layout_constraintTop_toTopOf="@id/botaoJ1Menos1" />
+
+        <Button
+            android:id="@+id/botaoJ1Menos9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="@color/truco_superficie_cinza"
+            android:text="@string/btn_menos_9"
+            android:textColor="@color/truco_cinza_claro"
+            app:layout_constraintEnd_toStartOf="@+id/botaoJ1Menos12"
+            app:layout_constraintStart_toEndOf="@+id/botaoJ1Menos6"
+            app:layout_constraintTop_toTopOf="@id/botaoJ1Menos1" />
+
+        <Button
+            android:id="@+id/botaoJ1Menos12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/truco_superficie_cinza"
+            android:text="@string/btn_menos_12"
+            android:textColor="@color/truco_cinza_claro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/botaoJ1Menos9"
+            app:layout_constraintTop_toTopOf="@id/botaoJ1Menos1" />
+
+        <!-- JOGADOR 2 HEADER (with 30dp spacing from player 1 buttons) -->
         <TextView
             android:id="@+id/tvCabecalhoJogador2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="30dp"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/botaoJ1Mais1"
-            tools:text="Jogador 2: 00" />
+            app:layout_constraintTop_toBottomOf="@id/botaoJ1Menos1"
+            tools:text="Jogador 2: 0" />
 
+        <!-- JOGADOR 2 FALTA -->
+        <TextView
+            android:id="@+id/tvFaltaJogador2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/truco_cinza_claro"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCabecalhoJogador2"
+            tools:text="Falta: 12" />
+
+        <!-- JOGADOR 2 BOTOES MAIS (+1, +3, +6, +9, +12) -->
         <Button
             android:id="@+id/botaoJ2Mais1"
             android:layout_width="0dp"
@@ -124,7 +214,7 @@
             app:layout_constraintEnd_toStartOf="@+id/botaoJ2Mais3"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvCabecalhoJogador2" />
+            app:layout_constraintTop_toBottomOf="@id/tvFaltaJogador2" />
 
         <Button
             android:id="@+id/botaoJ2Mais3"
@@ -147,7 +237,7 @@
             android:text="@string/btn_mais_6"
             android:textColor="@color/truco_cinza_claro"
             app:layout_constraintEnd_toStartOf="@+id/botaoJ2Mais9"
-            app:layout_constraintStart_toEndOf="@id/botaoJ2Mais3"
+            app:layout_constraintStart_toEndOf="@+id/botaoJ2Mais3"
             app:layout_constraintTop_toTopOf="@id/botaoJ2Mais1" />
 
         <Button
@@ -159,7 +249,7 @@
             android:text="@string/btn_mais_9"
             android:textColor="@color/truco_cinza_claro"
             app:layout_constraintEnd_toStartOf="@+id/botaoJ2Mais12"
-            app:layout_constraintStart_toEndOf="@id/botaoJ2Mais6"
+            app:layout_constraintStart_toEndOf="@+id/botaoJ2Mais6"
             app:layout_constraintTop_toTopOf="@id/botaoJ2Mais1" />
 
         <Button
@@ -170,41 +260,113 @@
             android:text="@string/btn_mais_12"
             android:textColor="@color/truco_cinza_claro"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/botaoJ2Mais9"
+            app:layout_constraintStart_toEndOf="@+id/botaoJ2Mais9"
             app:layout_constraintTop_toTopOf="@id/botaoJ2Mais1" />
 
+        <!-- JOGADOR 2 BOTOES MENOS (-1, -3, -6, -9, -12) -->
         <Button
-            android:id="@+id/botaoHistoricoJogadas"
-            android:layout_width="wrap_content"
+            android:id="@+id/botaoJ2Menos1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:backgroundTint="@color/truco_vermelho"
-            android:text="@string/btn_hist_jogadas"
-            android:textColor="@color/white"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="@color/truco_superficie_cinza"
+            android:text="@string/btn_menos_1"
+            android:textColor="@color/truco_cinza_claro"
+            app:layout_constraintEnd_toStartOf="@+id/botaoJ2Menos3"
+            app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/botaoJ2Mais1" />
 
         <Button
-            android:id="@+id/botaoZerarHistorico"
-            android:layout_width="wrap_content"
+            android:id="@+id/botaoJ2Menos3"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="@color/truco_superficie_cinza"
+            android:text="@string/btn_menos_3"
+            android:textColor="@color/truco_cinza_claro"
+            app:layout_constraintEnd_toStartOf="@+id/botaoJ2Menos6"
+            app:layout_constraintStart_toEndOf="@+id/botaoJ2Menos1"
+            app:layout_constraintTop_toTopOf="@id/botaoJ2Menos1" />
+
+        <Button
+            android:id="@+id/botaoJ2Menos6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="@color/truco_superficie_cinza"
+            android:text="@string/btn_menos_6"
+            android:textColor="@color/truco_cinza_claro"
+            app:layout_constraintEnd_toStartOf="@+id/botaoJ2Menos9"
+            app:layout_constraintStart_toEndOf="@+id/botaoJ2Menos3"
+            app:layout_constraintTop_toTopOf="@id/botaoJ2Menos1" />
+
+        <Button
+            android:id="@+id/botaoJ2Menos9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="@color/truco_superficie_cinza"
+            android:text="@string/btn_menos_9"
+            android:textColor="@color/truco_cinza_claro"
+            app:layout_constraintEnd_toStartOf="@+id/botaoJ2Menos12"
+            app:layout_constraintStart_toEndOf="@+id/botaoJ2Menos6"
+            app:layout_constraintTop_toTopOf="@id/botaoJ2Menos1" />
+
+        <Button
+            android:id="@+id/botaoJ2Menos12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/truco_superficie_cinza"
+            android:text="@string/btn_menos_12"
+            android:textColor="@color/truco_cinza_claro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/botaoJ2Menos9"
+            app:layout_constraintTop_toTopOf="@id/botaoJ2Menos1" />
+
+        <!-- BOTOES DE ACAO (HORIZONTAIS) -->
+        <Button
+            android:id="@+id/botaoHistoricoJogadas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="@color/truco_vermelho"
+            android:text="@string/btn_hist_jogadas"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/botaoZerarHistorico"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/botaoJ2Menos1" />
+
+        <Button
+            android:id="@+id/botaoZerarHistorico"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
             android:backgroundTint="@color/truco_superficie_cinza"
             android:text="@string/btn_zerar_historico"
             android:textColor="@color/truco_cinza_claro"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/botaoHistoricoJogadas" />
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/botaoInformarNomes"
+            app:layout_constraintStart_toEndOf="@+id/botaoHistoricoJogadas"
+            app:layout_constraintTop_toTopOf="@+id/botaoHistoricoJogadas" />
 
         <Button
             android:id="@+id/botaoInformarNomes"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginStart="4dp"
             android:backgroundTint="@color/truco_superficie_cinza"
             android:text="@string/btn_inf_nomes"
             android:textColor="@color/truco_cinza_claro"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/botaoZerarHistorico" />
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/botaoZerarHistorico"
+            app:layout_constraintTop_toTopOf="@+id/botaoHistoricoJogadas" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

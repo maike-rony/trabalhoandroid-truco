@@ -41,6 +41,20 @@ class TrucoGameLogicTest {
     }
 
     @Test
+    fun testarSubtracaoPontosJogador1NaoBaixaDeZero() {
+        logicaJogo.adicionarPontosJogador1(3)
+        logicaJogo.subtrairPontosJogador1(5)
+        assertEquals(0, logicaJogo.pontosJogador1)
+    }
+
+    @Test
+    fun testarSubtracaoPontosJogador2() {
+        logicaJogo.adicionarPontosJogador2(9)
+        logicaJogo.subtrairPontosJogador2(3)
+        assertEquals(6, logicaJogo.pontosJogador2)
+    }
+
+    @Test
     fun testarVitoriaJogador1Atingir12Pontos() {
         logicaJogo.adicionarPontosJogador1(9)
         val vencedor = logicaJogo.adicionarPontosJogador1(3)

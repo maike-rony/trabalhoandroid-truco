@@ -1,5 +1,7 @@
 package com.example.trabalhofinal_apptruco
 
+import kotlin.math.max
+
 class TrucoGameLogic(
     var nomeJogador1: String = "Jogador 1",
     var nomeJogador2: String = "Jogador 2"
@@ -21,6 +23,14 @@ class TrucoGameLogic(
     fun adicionarPontosJogador2(pontos: Int): String? {
         pontosJogador2 += pontos
         return verificarVencedor()
+    }
+
+    fun subtrairPontosJogador1(pontos: Int) {
+        pontosJogador1 = max(0, pontosJogador1 - pontos)
+    }
+
+    fun subtrairPontosJogador2(pontos: Int) {
+        pontosJogador2 = max(0, pontosJogador2 - pontos)
     }
 
     fun verificarVencedor(): String? {
