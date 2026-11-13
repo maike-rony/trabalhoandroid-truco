@@ -28,6 +28,11 @@
             android:exported="false"
             android:label="@string/tela_inicial_jogo_titulo"
             android:theme="@style/Theme.TrabalhoFinalAPPTruco" />
+        <activity
+            android:name=".TelaHistoricoJogadas"
+            android:exported="false"
+            android:label="@string/titulo_historico_jogadas"
+            android:theme="@style/Theme.TrabalhoFinalAPPTruco" />
     </application>
 
 </manifest>

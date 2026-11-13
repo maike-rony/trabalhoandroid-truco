@@ -1,5 +1,6 @@
 package com.example.trabalhofinal_apptruco
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -11,6 +12,9 @@ class TelaInicialJogo : AppCompatActivity() {
 
     private var pontosJogador1 = 0
     private var pontosJogador2 = 0
+    private var vitoriasJogador1 = 0
+    private var vitoriasJogador2 = 0
+
     private var nomeJogador1 = "Jogador 1"
     private var nomeJogador2 = "Jogador 2"
 
@@ -39,6 +43,7 @@ class TelaInicialJogo : AppCompatActivity() {
         val botaoJ2Mais9 = findViewById<Button>(R.id.botaoJ2Mais9)
         val botaoJ2Mais12 = findViewById<Button>(R.id.botaoJ2Mais12)
 
+        val botaoHistoricoJogadas = findViewById<Button>(R.id.botaoHistoricoJogadas)
         val botaoZerarHistorico = findViewById<Button>(R.id.botaoZerarHistorico)
         val botaoInformarNomes = findViewById<Button>(R.id.botaoInformarNomes)
 
@@ -56,8 +61,18 @@ class TelaInicialJogo : AppCompatActivity() {
         botaoJ2Mais9.setOnClickListener { adicionarPontosJogador2(9) }
         botaoJ2Mais12.setOnClickListener { adicionarPontosJogador2(12) }
 
+        botaoHistoricoJogadas.setOnClickListener {
+            val intentHistorico = Intent(this, TelaHistoricoJogadas::class.java).apply {
+                putExtra("EXTRA_JOGADOR_1", nomeJogador1)
+                putExtra("EXTRA_JOGADOR_2", nomeJogador2)
+                putExtra("EXTRA_VITORIAS_1", vitoriasJogador1)
+                putExtra("EXTRA_VITORIAS_2", vitoriasJogador2)
+            }
+            startActivity(intentHistorico)
+        }
+
         botaoZerarHistorico.setOnClickListener {
-            zerarPontos()
+            zerarHistorico()
         }
 
         botaoInformarNomes.setOnClickListener {
@@ -86,8 +101,10 @@ class TelaInicialJogo : AppCompatActivity() {
 
     private fun verificarVencedor() {
         if (pontosJogador1 >= 12) {
+            vitoriasJogador1++
             exibirMensagemVencedor(nomeJogador1)
         } else if (pontosJogador2 >= 12) {
+            vitoriasJogador2++
             exibirMensagemVencedor(nomeJogador2)
         }
     }
@@ -97,16 +114,24 @@ class TelaInicialJogo : AppCompatActivity() {
             .setTitle(R.string.titulo_fim_jogo)
             .setMessage(getString(R.string.mensagem_vencedor, nomeVencedor))
             .setPositiveButton(R.string.botao_ok) { dialog, _ ->
-                zerarPontos()
+                zerarPontosPontuacao()
                 dialog.dismiss()
             }
             .setCancelable(false)
             .show()
     }
 
-    private fun zerarPontos() {
+    private fun zerarPontosPontuacao() {
         pontosJogador1 = 0
         pontosJogador2 = 0
+        atualizarPlacar()
+    }
+
+    private fun zerarHistorico() {
+        pontosJogador1 = 0
+        pontosJogador2 = 0
+        vitoriasJogador1 = 0
+        vitoriasJogador2 = 0
         atualizarPlacar()
     }
 }

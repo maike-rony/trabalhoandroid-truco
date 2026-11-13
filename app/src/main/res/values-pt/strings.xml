@@ -5,6 +5,7 @@
     <string name="hint_jogador_01">Digite o nome do Jogador 1</string>
     <string name="hint_jogador_02">Digite o nome do Jogador 2</string>
     <string name="bot_comecar">Começar</string>
+    <string name="bot_voltar">Voltar</string>
     <string name="erro_nomes_iguais">Coloque nomes diferentes</string>
     <string name="tela_inicial_jogo_titulo">Tela Inicial do Jogo</string>
     <string name="jogadores_partida">%1$s VS %2$s</string>
@@ -20,4 +21,6 @@
     <string name="titulo_fim_jogo">Fim de Jogo</string>
     <string name="mensagem_vencedor">%1$s venceu a partida!</string>
     <string name="botao_ok">OK</string>
+    <string name="titulo_historico_jogadas">Histórico de Jogadas</string>
+    <string name="historico_vitorias_format">%1$s: %2$02d vitórias no TRUCO!!</string>
 </resources>
