@@ -1,160 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:fillViewport="true"
     tools:context=".TelaInicialJogo">
 
-    <TextView
-        android:id="@+id/tvCabecalhoJogador1"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Jogador 1: 00" />
+        android:padding="16dp">
 
-    <Button
-        android:id="@+id/botaoJ1Mais1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="4dp"
-        android:text="@string/btn_mais_1"
-        app:layout_constraintEnd_toStartOf="@+id/botaoJ1Mais3"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvCabecalhoJogador1" />
+        <TextView
+            android:id="@+id/tvCabecalhoJogador1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Jogador 1: 00" />
 
-    <Button
-        android:id="@+id/botaoJ1Mais3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:text="@string/btn_mais_3"
-        app:layout_constraintEnd_toStartOf="@+id/botaoJ1Mais6"
-        app:layout_constraintStart_toEndOf="@id/botaoJ1Mais1"
-        app:layout_constraintTop_toTopOf="@id/botaoJ1Mais1" />
+        <Button
+            android:id="@+id/botaoJ1Mais1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/btn_mais_1"
+            app:layout_constraintEnd_toStartOf="@+id/botaoJ1Mais3"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCabecalhoJogador1" />
 
-    <Button
-        android:id="@+id/botaoJ1Mais6"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:text="@string/btn_mais_6"
-        app:layout_constraintEnd_toStartOf="@+id/botaoJ1Mais9"
-        app:layout_constraintStart_toEndOf="@id/botaoJ1Mais3"
-        app:layout_constraintTop_toTopOf="@id/botaoJ1Mais1" />
+        <Button
+            android:id="@+id/botaoJ1Mais3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="@string/btn_mais_3"
+            app:layout_constraintEnd_toStartOf="@+id/botaoJ1Mais6"
+            app:layout_constraintStart_toEndOf="@id/botaoJ1Mais1"
+            app:layout_constraintTop_toTopOf="@id/botaoJ1Mais1" />
 
-    <Button
-        android:id="@+id/botaoJ1Mais9"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:text="@string/btn_mais_9"
-        app:layout_constraintEnd_toStartOf="@+id/botaoJ1Mais12"
-        app:layout_constraintStart_toEndOf="@id/botaoJ1Mais6"
-        app:layout_constraintTop_toTopOf="@id/botaoJ1Mais1" />
+        <Button
+            android:id="@+id/botaoJ1Mais6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="@string/btn_mais_6"
+            app:layout_constraintEnd_toStartOf="@+id/botaoJ1Mais9"
+            app:layout_constraintStart_toEndOf="@id/botaoJ1Mais3"
+            app:layout_constraintTop_toTopOf="@id/botaoJ1Mais1" />
 
-    <Button
-        android:id="@+id/botaoJ1Mais12"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_mais_12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/botaoJ1Mais9"
-        app:layout_constraintTop_toTopOf="@id/botaoJ1Mais1" />
+        <Button
+            android:id="@+id/botaoJ1Mais9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="@string/btn_mais_9"
+            app:layout_constraintEnd_toStartOf="@+id/botaoJ1Mais12"
+            app:layout_constraintStart_toEndOf="@id/botaoJ1Mais6"
+            app:layout_constraintTop_toTopOf="@id/botaoJ1Mais1" />
 
-    <TextView
-        android:id="@+id/tvCabecalhoJogador2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/botaoJ1Mais1"
-        tools:text="Jogador 2: 00" />
+        <Button
+            android:id="@+id/botaoJ1Mais12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_mais_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/botaoJ1Mais9"
+            app:layout_constraintTop_toTopOf="@id/botaoJ1Mais1" />
 
-    <Button
-        android:id="@+id/botaoJ2Mais1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="4dp"
-        android:text="@string/btn_mais_1"
-        app:layout_constraintEnd_toStartOf="@+id/botaoJ2Mais3"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvCabecalhoJogador2" />
+        <TextView
+            android:id="@+id/tvCabecalhoJogador2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/botaoJ1Mais1"
+            tools:text="Jogador 2: 00" />
 
-    <Button
-        android:id="@+id/botaoJ2Mais3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:text="@string/btn_mais_3"
-        app:layout_constraintEnd_toStartOf="@+id/botaoJ2Mais6"
-        app:layout_constraintStart_toEndOf="@id/botaoJ2Mais1"
-        app:layout_constraintTop_toTopOf="@id/botaoJ2Mais1" />
+        <Button
+            android:id="@+id/botaoJ2Mais1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/btn_mais_1"
+            app:layout_constraintEnd_toStartOf="@+id/botaoJ2Mais3"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCabecalhoJogador2" />
 
-    <Button
-        android:id="@+id/botaoJ2Mais6"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:text="@string/btn_mais_6"
-        app:layout_constraintEnd_toStartOf="@+id/botaoJ2Mais9"
-        app:layout_constraintStart_toEndOf="@id/botaoJ2Mais3"
-        app:layout_constraintTop_toTopOf="@id/botaoJ2Mais1" />
+        <Button
+            android:id="@+id/botaoJ2Mais3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="@string/btn_mais_3"
+            app:layout_constraintEnd_toStartOf="@+id/botaoJ2Mais6"
+            app:layout_constraintStart_toEndOf="@id/botaoJ2Mais1"
+            app:layout_constraintTop_toTopOf="@id/botaoJ2Mais1" />
 
-    <Button
-        android:id="@+id/botaoJ2Mais9"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:text="@string/btn_mais_9"
-        app:layout_constraintEnd_toStartOf="@+id/botaoJ2Mais12"
-        app:layout_constraintStart_toEndOf="@id/botaoJ2Mais6"
-        app:layout_constraintTop_toTopOf="@id/botaoJ2Mais1" />
+        <Button
+            android:id="@+id/botaoJ2Mais6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="@string/btn_mais_6"
+            app:layout_constraintEnd_toStartOf="@+id/botaoJ2Mais9"
+            app:layout_constraintStart_toEndOf="@id/botaoJ2Mais3"
+            app:layout_constraintTop_toTopOf="@id/botaoJ2Mais1" />
 
-    <Button
-        android:id="@+id/botaoJ2Mais12"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_mais_12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/botaoJ2Mais9"
-        app:layout_constraintTop_toTopOf="@id/botaoJ2Mais1" />
+        <Button
+            android:id="@+id/botaoJ2Mais9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="@string/btn_mais_9"
+            app:layout_constraintEnd_toStartOf="@+id/botaoJ2Mais12"
+            app:layout_constraintStart_toEndOf="@id/botaoJ2Mais6"
+            app:layout_constraintTop_toTopOf="@id/botaoJ2Mais1" />
 
-    <Button
-        android:id="@+id/botaoHistoricoJogadas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/btn_hist_jogadas"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/botaoJ2Mais1" />
+        <Button
+            android:id="@+id/botaoJ2Mais12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_mais_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/botaoJ2Mais9"
+            app:layout_constraintTop_toTopOf="@id/botaoJ2Mais1" />
 
-    <Button
-        android:id="@+id/botaoZerarHistorico"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/btn_zerar_historico"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/botaoHistoricoJogadas" />
+        <Button
+            android:id="@+id/botaoHistoricoJogadas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/btn_hist_jogadas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/botaoJ2Mais1" />
 
-    <Button
-        android:id="@+id/botaoInformarNomes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/btn_inf_nomes"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/botaoZerarHistorico" />
+        <Button
+            android:id="@+id/botaoZerarHistorico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/btn_zerar_historico"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/botaoHistoricoJogadas" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/botaoInformarNomes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/btn_inf_nomes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/botaoZerarHistorico" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
