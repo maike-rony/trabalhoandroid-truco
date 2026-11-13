@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.TrabalhoFinalAPPTruco" parent="Theme.AppCompat.DayNight.NoActionBar" />
+    <style name="Theme.TrabalhoFinalAPPTruco" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/truco_fundo_escuro</item>
+        <item name="android:textColor">@color/truco_cinza_claro</item>
+        <item name="colorPrimary">@color/truco_vermelho</item>
+        <item name="colorPrimaryDark">@color/truco_vermelho_escuro</item>
+        <item name="colorAccent">@color/truco_vermelho_claro</item>
+    </style>
 </resources>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/truco_fundo_escuro"
     android:fillViewport="true"
     tools:context=".TelaInicialJogo">
 
@@ -19,6 +20,7 @@
             android:layout_marginTop="8dp"
             android:gravity="center"
             android:text="@string/titulo_jogo_truco"
+            android:textColor="@color/truco_vermelho_claro"
             android:textSize="26sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -30,6 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +45,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="4dp"
+            android:backgroundTint="@color/truco_superficie_cinza"
             android:text="@string/btn_mais_1"
+            android:textColor="@color/truco_cinza_claro"
             app:layout_constraintEnd_toStartOf="@+id/botaoJ1Mais3"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +58,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
+            android:backgroundTint="@color/truco_superficie_cinza"
             android:text="@string/btn_mais_3"
+            android:textColor="@color/truco_cinza_claro"
             app:layout_constraintEnd_toStartOf="@+id/botaoJ1Mais6"
             app:layout_constraintStart_toEndOf="@id/botaoJ1Mais1"
             app:layout_constraintTop_toTopOf="@id/botaoJ1Mais1" />
@@ -63,7 +70,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
+            android:backgroundTint="@color/truco_superficie_cinza"
             android:text="@string/btn_mais_6"
+            android:textColor="@color/truco_cinza_claro"
             app:layout_constraintEnd_toStartOf="@+id/botaoJ1Mais9"
             app:layout_constraintStart_toEndOf="@id/botaoJ1Mais3"
             app:layout_constraintTop_toTopOf="@id/botaoJ1Mais1" />
@@ -73,7 +82,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
+            android:backgroundTint="@color/truco_superficie_cinza"
             android:text="@string/btn_mais_9"
+            android:textColor="@color/truco_cinza_claro"
             app:layout_constraintEnd_toStartOf="@+id/botaoJ1Mais12"
             app:layout_constraintStart_toEndOf="@id/botaoJ1Mais6"
             app:layout_constraintTop_toTopOf="@id/botaoJ1Mais1" />
@@ -82,7 +93,9 @@
             android:id="@+id/botaoJ1Mais12"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/truco_superficie_cinza"
             android:text="@string/btn_mais_12"
+            android:textColor="@color/truco_cinza_claro"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/botaoJ1Mais9"
             app:layout_constraintTop_toTopOf="@id/botaoJ1Mais1" />
@@ -92,6 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -104,7 +118,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="4dp"
+            android:backgroundTint="@color/truco_superficie_cinza"
             android:text="@string/btn_mais_1"
+            android:textColor="@color/truco_cinza_claro"
             app:layout_constraintEnd_toStartOf="@+id/botaoJ2Mais3"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +131,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
+            android:backgroundTint="@color/truco_superficie_cinza"
             android:text="@string/btn_mais_3"
+            android:textColor="@color/truco_cinza_claro"
             app:layout_constraintEnd_toStartOf="@+id/botaoJ2Mais6"
             app:layout_constraintStart_toEndOf="@id/botaoJ2Mais1"
             app:layout_constraintTop_toTopOf="@id/botaoJ2Mais1" />
@@ -125,7 +143,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
+            android:backgroundTint="@color/truco_superficie_cinza"
             android:text="@string/btn_mais_6"
+            android:textColor="@color/truco_cinza_claro"
             app:layout_constraintEnd_toStartOf="@+id/botaoJ2Mais9"
             app:layout_constraintStart_toEndOf="@id/botaoJ2Mais3"
             app:layout_constraintTop_toTopOf="@id/botaoJ2Mais1" />
@@ -135,7 +155,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
+            android:backgroundTint="@color/truco_superficie_cinza"
             android:text="@string/btn_mais_9"
+            android:textColor="@color/truco_cinza_claro"
             app:layout_constraintEnd_toStartOf="@+id/botaoJ2Mais12"
             app:layout_constraintStart_toEndOf="@id/botaoJ2Mais6"
             app:layout_constraintTop_toTopOf="@id/botaoJ2Mais1" />
@@ -144,7 +166,9 @@
             android:id="@+id/botaoJ2Mais12"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/truco_superficie_cinza"
             android:text="@string/btn_mais_12"
+            android:textColor="@color/truco_cinza_claro"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/botaoJ2Mais9"
             app:layout_constraintTop_toTopOf="@id/botaoJ2Mais1" />
@@ -154,7 +178,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:backgroundTint="@color/truco_vermelho"
             android:text="@string/btn_hist_jogadas"
+            android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/botaoJ2Mais1" />
 
@@ -163,7 +189,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:backgroundTint="@color/truco_superficie_cinza"
             android:text="@string/btn_zerar_historico"
+            android:textColor="@color/truco_cinza_claro"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/botaoHistoricoJogadas" />
 
@@ -172,7 +200,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:backgroundTint="@color/truco_superficie_cinza"
             android:text="@string/btn_inf_nomes"
+            android:textColor="@color/truco_cinza_claro"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/botaoZerarHistorico" />
 
