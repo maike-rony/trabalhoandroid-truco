@@ -17,4 +17,7 @@
     <string name="btn_hist_jogadas">Hist. de Jogadas</string>
     <string name="btn_zerar_historico">Zerar Histórico</string>
     <string name="btn_inf_nomes">Inf. Nomes</string>
+    <string name="titulo_fim_jogo">Fim de Jogo</string>
+    <string name="mensagem_vencedor">%1$s venceu a partida!</string>
+    <string name="botao_ok">OK</string>
 </resources>

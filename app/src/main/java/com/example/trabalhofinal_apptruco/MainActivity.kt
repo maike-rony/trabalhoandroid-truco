@@ -9,19 +9,18 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doOnTextChanged
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var etJogador1: EditText
+    private lateinit var etJogador2: EditText
+    private lateinit var botaoComecar: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val etJogador1 = findViewById<EditText>(R.id.etJogador1)
-        val etJogador2 = findViewById<EditText>(R.id.etJogador2)
-        val botaoComecar = findViewById<Button>(R.id.botaoComecar)
-
-        fun atualizarEstadoBotao() {
-            val textoJogador1 = etJogador1.text.toString().trim()
-            val textoJogador2 = etJogador2.text.toString().trim()
-            botaoComecar.isEnabled = textoJogador1.isNotEmpty() && textoJogador2.isNotEmpty()
-        }
+        etJogador1 = findViewById(R.id.etJogador1)
+        etJogador2 = findViewById(R.id.etJogador2)
+        botaoComecar = findViewById(R.id.botaoComecar)
 
         atualizarEstadoBotao()
 
@@ -47,5 +46,22 @@ class MainActivity : AppCompatActivity() {
             }
             startActivity(intentNavegacao)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        limparCampos()
+    }
+
+    private fun limparCampos() {
+        etJogador1.setText("")
+        etJogador2.setText("")
+        atualizarEstadoBotao()
+    }
+
+    private fun atualizarEstadoBotao() {
+        val textoJogador1 = etJogador1.text.toString().trim()
+        val textoJogador2 = etJogador2.text.toString().trim()
+        botaoComecar.isEnabled = textoJogador1.isNotEmpty() && textoJogador2.isNotEmpty()
     }
 }
