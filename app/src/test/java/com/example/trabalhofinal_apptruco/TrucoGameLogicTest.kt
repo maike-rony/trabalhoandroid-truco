@@ -68,18 +68,14 @@ class TrucoGameLogicTest {
     }
 
     @Test
-    fun testarZerarHistoricoZeraTudo() {
+    fun testarZerarHistoricoZeraPontosMantemVitorias() {
         logicaJogo.adicionarPontosJogador1(12)
-        logicaJogo.zerarPontosPontuacao()
-        logicaJogo.adicionarPontosJogador2(12)
         assertEquals(1, logicaJogo.vitoriasJogador1)
-        assertEquals(1, logicaJogo.vitoriasJogador2)
 
         logicaJogo.zerarHistorico()
         assertEquals(0, logicaJogo.pontosJogador1)
         assertEquals(0, logicaJogo.pontosJogador2)
-        assertEquals(0, logicaJogo.vitoriasJogador1)
-        assertEquals(0, logicaJogo.vitoriasJogador2)
+        assertEquals(1, logicaJogo.vitoriasJogador1)
     }
 
     @Test

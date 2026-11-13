@@ -45,8 +45,6 @@ class TrucoGameLogic(
     fun zerarHistorico() {
         pontosJogador1 = 0
         pontosJogador2 = 0
-        vitoriasJogador1 = 0
-        vitoriasJogador2 = 0
     }
 
     companion object {

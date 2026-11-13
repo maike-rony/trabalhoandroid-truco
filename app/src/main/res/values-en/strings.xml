@@ -21,6 +21,7 @@
     <string name="titulo_fim_jogo">Game Over</string>
     <string name="mensagem_vencedor">%1$s won the match!</string>
     <string name="botao_ok">OK</string>
+    <string name="titulo_jogo_truco"> Truco Game </string>
     <string name="titulo_historico_jogadas">Move History</string>
     <string name="historico_vitorias_format">%1$s: %2$02d Wins Truco!!</string>
 </resources>
