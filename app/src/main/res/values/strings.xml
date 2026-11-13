@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Trabalho Final - APP Truco</string>
+    <string name="nome_jogador_01">Nome do Jogador 01</string>
+    <string name="nome_jogador_02">Nome do Jogador 02</string>
+    <string name="hint_jogador_01">Digite o nome do Jogador 1</string>
+    <string name="hint_jogador_02">Digite o nome do Jogador 2</string>
+    <string name="bot_comecar">Começar</string>
+    <string name="erro_nomes_iguais">Coloque nomes diferentes</string>
+    <string name="tela_inicial_jogo_titulo">Tela Inicial do Jogo</string>
+    <string name="jogadores_partida">%1$s VS %2$s</string>
+    <string name="jogador_pontos_format">%1$s: %2$s</string>
+    <string name="btn_mais_1">+1</string>
+    <string name="btn_mais_3">+3</string>
+    <string name="btn_mais_6">+6</string>
+    <string name="btn_mais_9">+9</string>
+    <string name="btn_mais_12">+12</string>
+    <string name="btn_hist_jogadas">Hist. de Jogadas</string>
+    <string name="btn_zerar_historico">Zerar Histórico</string>
+    <string name="btn_inf_nomes">Inf. Nomes</string>
 </resources>

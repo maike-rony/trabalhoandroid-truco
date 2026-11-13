@@ -23,6 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".TelaInicialJogo"
+            android:exported="false"
+            android:label="@string/tela_inicial_jogo_titulo"
+            android:theme="@style/Theme.TrabalhoFinalAPPTruco" />
     </application>
 
 </manifest>
