@@ -12,17 +12,19 @@ Aplicativo Android desenvolvido em **Kotlin** para marcação de pontos e gerenc
    * Validação de nomes iguais (impede que ambos os jogadores tenham o mesmo nome).
 
 2. **Tela do Jogo (TelaInicialJogo):**
-   * **Título Centralizado:** Exibe **"Truco Game"** no topo da tela.
+   * **Título Centralizado:** Exibe **"Contador de Truco"** no topo da tela.
    * **Placar Dinâmico:** Exibe o nome e a pontuação atual em destaque (com os pontos faltantes para a vitória *"Falta: X"* exibidos em uma linha abaixo).
-   * **Botões de Pontuação (+ / -):** Permite incrementar ou decrementar pontos (`+1`, `+3`, `+6`, `+9`, `+12` e `-1`, `-3`, `-6`, `-9`, `-12`). A pontuação possui limite mínimo em `0` (não diminui abaixo de zero).
-   * **Condição de Vitória:** Ao atingir ou superar `12` pontos, um diálogo (*AlertDialog*) anuncia o vencedor e zera a pontuação para a próxima partida, incrementando o histórico de vitórias do respectivo jogador.
+   * **Botões de Pontuação (+ / -):** Permite incrementar ou decrementar pontos (`+1`, `+3`, `+6`, `+9`, `+12` e `-1`, `-3`, `-6`, `-9`, `-11`). A pontuação possui limite mínimo em `0` (não diminui abaixo de zero). Os botões numéricos têm fonte maior, negrito e largura ampliada.
+   * **Condição de Vitória:** Ao atingir ou superar `12` pontos, um diálogo (*AlertDialog*) anuncia o vencedor, registra a partida e zera a pontuação para a próxima partida.
    * **Botões de Ação (Dispostos horizontalmente):**
-     * **Hist. de Jogadas:** Abre a tela de histórico de partidas ganhas.
-     * **Zerar Histórico:** Reinicia a pontuação atual.
+     * **Hist. de Jogadas:** Abre a tela de histórico com as partidas registradas, vencedor, perdedor e placar de cada partida.
+     * **Zerar Histórico:** Limpa as partidas registradas e reinicia a pontuação atual. Exibe a mensagem **"Pontuação dos jogadores zerada!"**.
      * **Inf. Nomes:** Retorna para a tela de cadastro de nomes.
 
 3. **Tela de Histórico de Jogadas (TelaHistoricoJogadas):**
-   * Exibe o título **"Truco Game"**, o subtítulo *"Histórico de Jogadas"* e o placar acumulado de partidas ganhas por cada jogador.
+   * Exibe o título **"Contador de Truco"**, o subtítulo *"Histórico de Jogadas"* e o resumo de vitórias e derrotas de cada jogador.
+   * Lista cada partida com os nomes dos jogadores e a pontuação final.
+   * Quando os dois jogadores ainda não possuem partidas, exibe **"Nenhuma Partida Registrada no Historico"**.
    * Botão **"Voltar"** para retornar ao jogo.
 
 ---
@@ -41,7 +43,7 @@ O aplicativo conta com suporte automático a **Tema Claro e Tema Escuro (DayNigh
 * **UI & Layouts:** `ConstraintLayout` e `ScrollView` (com suporte responsivo a rotação de tela / *Landscape*).
 * **Gerenciamento de Views:** **View Binding** habilitado em todas as Activities.
 * **Internacionalização (i18n):** Suporte completo para **Português (PT)** e **Inglês (EN)**.
-* **Testes Unitários:** Testes robustos desenvolvidos com JUnit (`TrucoGameLogicTest` e `TrucoPontoLogicTest`).
+* **Testes Unitários:** Testes JUnit para a lógica de pontuação, validação de nomes e repositório de histórico (`TrucoGameLogicTest`, `TrucoPontoLogicTest` e `RepositorioHistoricoTest`).
 
 ---
 
