@@ -20,14 +20,28 @@
     <string name="btn_menos_3">-3</string>
     <string name="btn_menos_6">-6</string>
     <string name="btn_menos_9">-9</string>
-    <string name="btn_menos_12">-12</string>
+    <string name="btn_menos_11">-11</string>
     <string name="btn_hist_jogadas">Hist. de Jogadas</string>
     <string name="btn_zerar_historico">Zerar Histórico</string>
     <string name="btn_inf_nomes">Inf. Nomes</string>
     <string name="titulo_fim_jogo">Fim de Jogo</string>
     <string name="mensagem_vencedor">%1$s venceu a partida!</string>
     <string name="botao_ok">OK</string>
-    <string name="titulo_jogo_truco">Truco Game</string>
+    <string name="titulo_jogo_truco">Contador de Truco</string>
     <string name="titulo_historico_jogadas">Histórico de Jogadas</string>
     <string name="historico_vitorias_format">%1$s: %2$d vitórias no TRUCO!!</string>
+    <string name="historico_resumo">%1$s (%2$d %3$s / %4$d %5$s)</string>
+    <string name="historico_nenhuma_partida">Nenhuma partida registrada.</string>
+    <string name="historico_sem_partidas">Nenhuma Partida Registrada no Historico</string>
+    <string name="historico_partida_vitoria">%1$s venceu %2$s por %3$d x %4$d</string>
+    <string name="historico_partida_derrota">%1$s perdeu para %2$s por %3$d x %4$d</string>
+    <plurals name="historico_vitorias">
+        <item quantity="one">vitória</item>
+        <item quantity="other">vitórias</item>
+    </plurals>
+    <plurals name="historico_derrotas">
+        <item quantity="one">derrota</item>
+        <item quantity="other">derrotas</item>
+    </plurals>
+    <string name="pontuacao_jogadores_zerada">Pontuação dos jogadores zerada!</string>
 </resources>

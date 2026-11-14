@@ -20,14 +20,16 @@
     <string name="btn_menos_3">-3</string>
     <string name="btn_menos_6">-6</string>
     <string name="btn_menos_9">-9</string>
-    <string name="btn_menos_12">-12</string>
+    <string name="btn_menos_11">-11</string>
     <string name="btn_hist_jogadas">Move History</string>
     <string name="btn_zerar_historico">Reset History</string>
     <string name="btn_inf_nomes">Enter Names</string>
     <string name="titulo_fim_jogo">Game Over</string>
     <string name="mensagem_vencedor">%1$s won the match!</string>
     <string name="botao_ok">OK</string>
-    <string name="titulo_jogo_truco">Truco Game</string>
+    <string name="titulo_jogo_truco">Truco Count</string>
     <string name="titulo_historico_jogadas">Move History</string>
     <string name="historico_vitorias_format">%1$s: %2$d Wins Truco!!</string>
+    <string name="pontuacao_jogadores_zerada">Players scores reset!</string>
+    <string name="historico_sem_partidas">No Matches Recorded in History</string>
 </resources>

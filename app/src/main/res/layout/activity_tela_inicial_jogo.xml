@@ -27,7 +27,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- JOGADOR 1 HEADER -->
         <TextView
             android:id="@+id/tvCabecalhoJogador1"
             android:layout_width="wrap_content"
@@ -40,7 +39,6 @@
             app:layout_constraintTop_toBottomOf="@id/tvTituloJogoTruco"
             tools:text="Jogador 1: 0" />
 
-        <!-- JOGADOR 1 FALTA -->
         <TextView
             android:id="@+id/tvFaltaJogador1"
             android:layout_width="wrap_content"
@@ -53,7 +51,6 @@
             app:layout_constraintTop_toBottomOf="@id/tvCabecalhoJogador1"
             tools:text="Falta: 12" />
 
-        <!-- JOGADOR 1 BOTOES MAIS (+1, +3, +6, +9, +12) -->
         <Button
             android:id="@+id/botaoJ1Mais1"
             android:layout_width="0dp"
@@ -115,7 +112,6 @@
             app:layout_constraintStart_toEndOf="@+id/botaoJ1Mais9"
             app:layout_constraintTop_toTopOf="@id/botaoJ1Mais1" />
 
-        <!-- JOGADOR 1 BOTOES MENOS (-1, -3, -6, -9, -12) -->
         <Button
             android:id="@+id/botaoJ1Menos1"
             android:layout_width="0dp"
@@ -162,16 +158,16 @@
             android:backgroundTint="@color/truco_superficie"
             android:text="@string/btn_menos_9"
             android:textColor="@color/truco_texto"
-            app:layout_constraintEnd_toStartOf="@+id/botaoJ1Menos12"
+            app:layout_constraintEnd_toStartOf="@+id/botaoJ1Menos11"
             app:layout_constraintStart_toEndOf="@+id/botaoJ1Menos6"
             app:layout_constraintTop_toTopOf="@id/botaoJ1Menos1" />
 
         <Button
-            android:id="@+id/botaoJ1Menos12"
+            android:id="@+id/botaoJ1Menos11"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/truco_superficie"
-            android:text="@string/btn_menos_12"
+            android:text="@string/btn_menos_11"
             android:textColor="@color/truco_texto"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/botaoJ1Menos9"
@@ -239,7 +235,7 @@
             android:text="@string/btn_mais_6"
             android:textColor="@color/truco_texto"
             app:layout_constraintEnd_toStartOf="@+id/botaoJ2Mais9"
-            app:layout_constraintStart_toEndOf="@id/botaoJ2Mais3"
+            app:layout_constraintStart_toEndOf="@+id/botaoJ2Mais3"
             app:layout_constraintTop_toTopOf="@id/botaoJ2Mais1" />
 
         <Button
@@ -265,7 +261,7 @@
             app:layout_constraintStart_toEndOf="@+id/botaoJ2Mais9"
             app:layout_constraintTop_toTopOf="@id/botaoJ2Mais1" />
 
-        <!-- JOGADOR 2 BOTOES MENOS (-1, -3, -6, -9, -12) -->
+        <!-- JOGADOR 2 BOTOES MENOS (-1, -3, -6, -9, -11) -->
         <Button
             android:id="@+id/botaoJ2Menos1"
             android:layout_width="0dp"
@@ -312,27 +308,27 @@
             android:backgroundTint="@color/truco_superficie"
             android:text="@string/btn_menos_9"
             android:textColor="@color/truco_texto"
-            app:layout_constraintEnd_toStartOf="@+id/botaoJ2Menos12"
+            app:layout_constraintEnd_toStartOf="@+id/botaoJ2Menos11"
             app:layout_constraintStart_toEndOf="@+id/botaoJ2Menos6"
             app:layout_constraintTop_toTopOf="@id/botaoJ2Menos1" />
 
         <Button
-            android:id="@+id/botaoJ2Menos12"
+            android:id="@+id/botaoJ2Menos11"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/truco_superficie"
-            android:text="@string/btn_menos_12"
+            android:text="@string/btn_menos_11"
             android:textColor="@color/truco_texto"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/botaoJ2Menos9"
             app:layout_constraintTop_toTopOf="@id/botaoJ2Menos1" />
 
-        <!-- BOTOES DE ACAO (HORIZONTAIS) -->
+        <!-- BOTOES DE ACAO (HORIZONTAIS) - ACIMA DO INCLUDE -->
         <Button
             android:id="@+id/botaoHistoricoJogadas"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="4dp"
             android:backgroundTint="@color/truco_vermelho"
             android:text="@string/btn_hist_jogadas"
@@ -370,6 +366,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/botaoZerarHistorico"
             app:layout_constraintTop_toTopOf="@+id/botaoHistoricoJogadas" />
+
+        <!-- HISTORICO - ABAIXO DOS BOTOES -->
+        <LinearLayout
+            android:id="@+id/layoutContainerHistorico"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/botaoHistoricoJogadas" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
