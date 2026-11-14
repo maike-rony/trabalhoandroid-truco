@@ -2,13 +2,14 @@ package com.example.trabalhofinal_apptruco
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.trabalhofinal_apptruco.databinding.ActivityTelaInicialJogoBinding
 import kotlin.math.max
 
 class TelaInicialJogo : AppCompatActivity() {
+
+    private lateinit var binding: ActivityTelaInicialJogoBinding
 
     private var pontosJogador1 = 0
     private var pontosJogador2 = 0
@@ -18,78 +19,41 @@ class TelaInicialJogo : AppCompatActivity() {
     private var nomeJogador1 = "Jogador 1"
     private var nomeJogador2 = "Jogador 2"
 
-    private lateinit var tvCabecalhoJogador1: TextView
-    private lateinit var tvFaltaJogador1: TextView
-    private lateinit var tvCabecalhoJogador2: TextView
-    private lateinit var tvFaltaJogador2: TextView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tela_inicial_jogo)
+        binding = ActivityTelaInicialJogoBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         nomeJogador1 = intent.getStringExtra("EXTRA_JOGADOR_1")?.takeIf { it.isNotBlank() } ?: "Jogador 1"
         nomeJogador2 = intent.getStringExtra("EXTRA_JOGADOR_2")?.takeIf { it.isNotBlank() } ?: "Jogador 2"
 
-        tvCabecalhoJogador1 = findViewById(R.id.tvCabecalhoJogador1)
-        tvFaltaJogador1 = findViewById(R.id.tvFaltaJogador1)
-        tvCabecalhoJogador2 = findViewById(R.id.tvCabecalhoJogador2)
-        tvFaltaJogador2 = findViewById(R.id.tvFaltaJogador2)
-
-        val botaoJ1Mais1 = findViewById<Button>(R.id.botaoJ1Mais1)
-        val botaoJ1Mais3 = findViewById<Button>(R.id.botaoJ1Mais3)
-        val botaoJ1Mais6 = findViewById<Button>(R.id.botaoJ1Mais6)
-        val botaoJ1Mais9 = findViewById<Button>(R.id.botaoJ1Mais9)
-        val botaoJ1Mais12 = findViewById<Button>(R.id.botaoJ1Mais12)
-
-        val botaoJ1Menos1 = findViewById<Button>(R.id.botaoJ1Menos1)
-        val botaoJ1Menos3 = findViewById<Button>(R.id.botaoJ1Menos3)
-        val botaoJ1Menos6 = findViewById<Button>(R.id.botaoJ1Menos6)
-        val botaoJ1Menos9 = findViewById<Button>(R.id.botaoJ1Menos9)
-        val botaoJ1Menos12 = findViewById<Button>(R.id.botaoJ1Menos12)
-
-        val botaoJ2Mais1 = findViewById<Button>(R.id.botaoJ2Mais1)
-        val botaoJ2Mais3 = findViewById<Button>(R.id.botaoJ2Mais3)
-        val botaoJ2Mais6 = findViewById<Button>(R.id.botaoJ2Mais6)
-        val botaoJ2Mais9 = findViewById<Button>(R.id.botaoJ2Mais9)
-        val botaoJ2Mais12 = findViewById<Button>(R.id.botaoJ2Mais12)
-
-        val botaoJ2Menos1 = findViewById<Button>(R.id.botaoJ2Menos1)
-        val botaoJ2Menos3 = findViewById<Button>(R.id.botaoJ2Menos3)
-        val botaoJ2Menos6 = findViewById<Button>(R.id.botaoJ2Menos6)
-        val botaoJ2Menos9 = findViewById<Button>(R.id.botaoJ2Menos9)
-        val botaoJ2Menos12 = findViewById<Button>(R.id.botaoJ2Menos12)
-
-        val botaoHistoricoJogadas = findViewById<Button>(R.id.botaoHistoricoJogadas)
-        val botaoZerarHistorico = findViewById<Button>(R.id.botaoZerarHistorico)
-        val botaoInformarNomes = findViewById<Button>(R.id.botaoInformarNomes)
-
         atualizarPlacar()
 
-        botaoJ1Mais1.setOnClickListener { adicionarPontosJogador1(1) }
-        botaoJ1Mais3.setOnClickListener { adicionarPontosJogador1(3) }
-        botaoJ1Mais6.setOnClickListener { adicionarPontosJogador1(6) }
-        botaoJ1Mais9.setOnClickListener { adicionarPontosJogador1(9) }
-        botaoJ1Mais12.setOnClickListener { adicionarPontosJogador1(12) }
+        binding.botaoJ1Mais1.setOnClickListener { adicionarPontosJogador1(1) }
+        binding.botaoJ1Mais3.setOnClickListener { adicionarPontosJogador1(3) }
+        binding.botaoJ1Mais6.setOnClickListener { adicionarPontosJogador1(6) }
+        binding.botaoJ1Mais9.setOnClickListener { adicionarPontosJogador1(9) }
+        binding.botaoJ1Mais12.setOnClickListener { adicionarPontosJogador1(12) }
 
-        botaoJ1Menos1.setOnClickListener { subtrairPontosJogador1(1) }
-        botaoJ1Menos3.setOnClickListener { subtrairPontosJogador1(3) }
-        botaoJ1Menos6.setOnClickListener { subtrairPontosJogador1(6) }
-        botaoJ1Menos9.setOnClickListener { subtrairPontosJogador1(9) }
-        botaoJ1Menos12.setOnClickListener { subtrairPontosJogador1(12) }
+        binding.botaoJ1Menos1.setOnClickListener { subtrairPontosJogador1(1) }
+        binding.botaoJ1Menos3.setOnClickListener { subtrairPontosJogador1(3) }
+        binding.botaoJ1Menos6.setOnClickListener { subtrairPontosJogador1(6) }
+        binding.botaoJ1Menos9.setOnClickListener { subtrairPontosJogador1(9) }
+        binding.botaoJ1Menos12.setOnClickListener { subtrairPontosJogador1(12) }
 
-        botaoJ2Mais1.setOnClickListener { adicionarPontosJogador2(1) }
-        botaoJ2Mais3.setOnClickListener { adicionarPontosJogador2(3) }
-        botaoJ2Mais6.setOnClickListener { adicionarPontosJogador2(6) }
-        botaoJ2Mais9.setOnClickListener { adicionarPontosJogador2(9) }
-        botaoJ2Mais12.setOnClickListener { adicionarPontosJogador2(12) }
+        binding.botaoJ2Mais1.setOnClickListener { adicionarPontosJogador2(1) }
+        binding.botaoJ2Mais3.setOnClickListener { adicionarPontosJogador2(3) }
+        binding.botaoJ2Mais6.setOnClickListener { adicionarPontosJogador2(6) }
+        binding.botaoJ2Mais9.setOnClickListener { adicionarPontosJogador2(9) }
+        binding.botaoJ2Mais12.setOnClickListener { adicionarPontosJogador2(12) }
 
-        botaoJ2Menos1.setOnClickListener { subtrairPontosJogador2(1) }
-        botaoJ2Menos3.setOnClickListener { subtrairPontosJogador2(3) }
-        botaoJ2Menos6.setOnClickListener { subtrairPontosJogador2(6) }
-        botaoJ2Menos9.setOnClickListener { subtrairPontosJogador2(9) }
-        botaoJ2Menos12.setOnClickListener { subtrairPontosJogador2(12) }
+        binding.botaoJ2Menos1.setOnClickListener { subtrairPontosJogador2(1) }
+        binding.botaoJ2Menos3.setOnClickListener { subtrairPontosJogador2(3) }
+        binding.botaoJ2Menos6.setOnClickListener { subtrairPontosJogador2(6) }
+        binding.botaoJ2Menos9.setOnClickListener { subtrairPontosJogador2(9) }
+        binding.botaoJ2Menos12.setOnClickListener { subtrairPontosJogador2(12) }
 
-        botaoHistoricoJogadas.setOnClickListener {
+        binding.botaoHistoricoJogadas.setOnClickListener {
             val intentHistorico = Intent(this, TelaHistoricoJogadas::class.java).apply {
                 putExtra("EXTRA_JOGADOR_1", nomeJogador1)
                 putExtra("EXTRA_JOGADOR_2", nomeJogador2)
@@ -99,11 +63,11 @@ class TelaInicialJogo : AppCompatActivity() {
             startActivity(intentHistorico)
         }
 
-        botaoZerarHistorico.setOnClickListener {
+        binding.botaoZerarHistorico.setOnClickListener {
             zerarHistorico()
         }
 
-        botaoInformarNomes.setOnClickListener {
+        binding.botaoInformarNomes.setOnClickListener {
             finish()
         }
     }
@@ -112,11 +76,11 @@ class TelaInicialJogo : AppCompatActivity() {
         val falta1 = max(0, 12 - pontosJogador1)
         val falta2 = max(0, 12 - pontosJogador2)
 
-        tvCabecalhoJogador1.text = getString(R.string.jogador_nome_pontos_format, nomeJogador1, pontosJogador1)
-        tvFaltaJogador1.text = getString(R.string.jogador_falta_format, falta1)
+        binding.tvCabecalhoJogador1.text = getString(R.string.jogador_nome_pontos_format, nomeJogador1, pontosJogador1)
+        binding.tvFaltaJogador1.text = getString(R.string.jogador_falta_format, falta1)
 
-        tvCabecalhoJogador2.text = getString(R.string.jogador_nome_pontos_format, nomeJogador2, pontosJogador2)
-        tvFaltaJogador2.text = getString(R.string.jogador_falta_format, falta2)
+        binding.tvCabecalhoJogador2.text = getString(R.string.jogador_nome_pontos_format, nomeJogador2, pontosJogador2)
+        binding.tvFaltaJogador2.text = getString(R.string.jogador_falta_format, falta2)
     }
 
     private fun adicionarPontosJogador1(pontos: Int) {

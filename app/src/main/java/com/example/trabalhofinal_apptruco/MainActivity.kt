@@ -2,34 +2,28 @@ package com.example.trabalhofinal_apptruco
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doOnTextChanged
+import com.example.trabalhofinal_apptruco.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var etJogador1: EditText
-    private lateinit var etJogador2: EditText
-    private lateinit var botaoComecar: Button
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        etJogador1 = findViewById(R.id.etJogador1)
-        etJogador2 = findViewById(R.id.etJogador2)
-        botaoComecar = findViewById(R.id.botaoComecar)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         atualizarEstadoBotao()
 
-        etJogador1.doOnTextChanged { _, _, _, _ -> atualizarEstadoBotao() }
-        etJogador2.doOnTextChanged { _, _, _, _ -> atualizarEstadoBotao() }
+        binding.etJogador1.doOnTextChanged { _, _, _, _ -> atualizarEstadoBotao() }
+        binding.etJogador2.doOnTextChanged { _, _, _, _ -> atualizarEstadoBotao() }
 
-        botaoComecar.setOnClickListener {
-            val nomeJogador1 = etJogador1.text.toString().trim()
-            val nomeJogador2 = etJogador2.text.toString().trim()
+        binding.botaoComecar.setOnClickListener {
+            val nomeJogador1 = binding.etJogador1.text.toString().trim()
+            val nomeJogador2 = binding.etJogador2.text.toString().trim()
 
             if (nomeJogador1.equals(nomeJogador2, ignoreCase = true)) {
                 Toast.makeText(
@@ -54,14 +48,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun limparCampos() {
-        etJogador1.setText("")
-        etJogador2.setText("")
+        binding.etJogador1.setText("")
+        binding.etJogador2.setText("")
         atualizarEstadoBotao()
     }
 
     private fun atualizarEstadoBotao() {
-        val textoJogador1 = etJogador1.text.toString().trim()
-        val textoJogador2 = etJogador2.text.toString().trim()
-        botaoComecar.isEnabled = textoJogador1.isNotEmpty() && textoJogador2.isNotEmpty()
+        val textoJogador1 = binding.etJogador1.text.toString().trim()
+        val textoJogador2 = binding.etJogador2.text.toString().trim()
+        binding.botaoComecar.isEnabled = textoJogador1.isNotEmpty() && textoJogador2.isNotEmpty()
     }
 }
