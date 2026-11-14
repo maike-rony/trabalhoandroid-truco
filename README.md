@@ -8,38 +8,37 @@ Aplicativo Android desenvolvido em **Kotlin** para marcação de pontos e gerenc
 
 1. **Tela Inicial (MainActivity):**
    * Entrada dos nomes dos dois jogadores (**Jogador 01** e **Jogador 02**).
-   * Validação em tempo real: o botão **"Começar"** só é habilitado após preenchimento de ambos os nomes.
+   * Validação em tempo real: o botão **"Começar"** só é habilitado após o preenchimento de ambos os nomes.
    * Validação de nomes iguais (impede que ambos os jogadores tenham o mesmo nome).
-   * Limpeza automática dos campos ao retornar da tela de jogo.
 
 2. **Tela do Jogo (TelaInicialJogo):**
-   * **Placar Dinâmico:** Exibe o nome de cada jogador, sua pontuação atual (com zero formatado como `0`) e os pontos faltantes para alcançar a vitória (`"Falta: X"`).
-   * **Botões de Pontuação (+ / -):** Permite incrementar ou decrementar pontos (`+1`, `+3`, `+6`, `+9`, `+12` e `-1`, `-3`, `-6`, `-9`, `-12`). A pontuação possui limite mínimo em `0`.
+   * **Título Centralizado:** Exibe **"Truco Game"** no topo da tela.
+   * **Placar Dinâmico:** Exibe o nome e a pontuação atual em destaque (com os pontos faltantes para a vitória *"Falta: X"* exibidos em uma linha abaixo).
+   * **Botões de Pontuação (+ / -):** Permite incrementar ou decrementar pontos (`+1`, `+3`, `+6`, `+9`, `+12` e `-1`, `-3`, `-6`, `-9`, `-12`). A pontuação possui limite mínimo em `0` (não diminui abaixo de zero).
    * **Condição de Vitória:** Ao atingir ou superar `12` pontos, um diálogo (*AlertDialog*) anuncia o vencedor e zera a pontuação para a próxima partida, incrementando o histórico de vitórias do respectivo jogador.
-   * **Botões de Ação:**
+   * **Botões de Ação (Dispostos horizontalmente):**
      * **Hist. de Jogadas:** Abre a tela de histórico de partidas ganhas.
      * **Zerar Histórico:** Reinicia a pontuação atual.
      * **Inf. Nomes:** Retorna para a tela de cadastro de nomes.
 
 3. **Tela de Histórico de Jogadas (TelaHistoricoJogadas):**
-   * Exibe o título centralizado **" Jogo Truco "** e o placar acumulado de partidas ganhas por cada jogador desde o início da sessão.
-   * Botão **"Voltar"** para retornar rapidamente ao jogo.
+   * Exibe o título **"Truco Game"**, o subtítulo *"Histórico de Jogadas"* e o placar acumulado de partidas ganhas por cada jogador.
+   * Botão **"Voltar"** para retornar ao jogo.
 
 ---
 
-## 🎨 Paleta de Cores e Identidade Visual
+## 🎨 Paleta de Cores e Temas (Light / Dark Mode)
 
-O aplicativo possui um tema moderno e escuro inspirado no universo de jogos de cartas:
-* **Preto / Fundo Escuro** (`#121212`)
-* **Vermelho Truco** (`#D32F2F` e `#FF5252`)
-* **Cinza Superfície** (`#1E1E1E` e `#E0E0E0`)
+O aplicativo conta com suporte automático a **Tema Claro e Tema Escuro (DayNight)**:
+* **Tema Escuro:** Fundo preto (`#121212`), textos em branco (`#FFFFFF`) e acentos em vermelho (`#D32F2F`).
+* **Tema Claro:** Fundo branco (`#FFFFFF`), textos principais em preto (`#000000`) e acentos em vermelho (`#D32F2F`).
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
 * **Linguagem:** Kotlin
-* **UI:** Views tradicionais com `ConstraintLayout` e `ScrollView` (adaptado para rotação de tela / *Landscape*).
+* **UI & Layouts:** `ConstraintLayout` e `ScrollView` (com suporte responsivo a rotação de tela / *Landscape*).
 * **Gerenciamento de Views:** **View Binding** habilitado em todas as Activities.
 * **Internacionalização (i18n):** Suporte completo para **Português (PT)** e **Inglês (EN)**.
 * **Testes Unitários:** Testes robustos desenvolvidos com JUnit (`TrucoGameLogicTest` e `TrucoPontoLogicTest`).
@@ -52,7 +51,7 @@ Para executar os testes unitários via terminal (Gradle):
 ```bash
 ./gradlew testDebugUnitTest
 ```
-Ou clique com o botão direito na pasta de testes (`src/test`) no Android Studio e selecione **Run Tests with Coverage**.
+Ou clique com o botão direito na pasta de testes (`src/test`) no Android Studio e selecione **Run Tests**.
 
 ---
 

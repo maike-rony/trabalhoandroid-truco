@@ -42,16 +42,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        limparCampos()
-    }
-
-    private fun limparCampos() {
-        binding.etJogador1.setText("")
-        binding.etJogador2.setText("")
-        atualizarEstadoBotao()
-    }
 
     private fun atualizarEstadoBotao() {
         val textoJogador1 = binding.etJogador1.text.toString().trim()
