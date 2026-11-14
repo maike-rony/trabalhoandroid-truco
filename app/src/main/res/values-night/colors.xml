@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="truco_fundo">#FF121212</color>
+    <color name="truco_fundo_escuro">#FF121212</color>
+    <color name="truco_superficie">#FF1E1E1E</color>
+    <color name="truco_superficie_cinza">#FF1E1E1E</color>
+    <color name="truco_texto">#FFFFFFFF</color>
+    <color name="truco_cinza_claro">#FFE0E0E0</color>
+    <color name="truco_texto_secundario">#FFE0E0E0</color>
+    <color name="truco_cinza_medio">#FF9E9E9E</color>
+    <color name="truco_vermelho">#FFD32F2F</color>
+    <color name="truco_vermelho_escuro">#FF8E0000</color>
+    <color name="truco_vermelho_claro">#FFFF5252</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+</resources>

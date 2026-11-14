@@ -239,7 +239,7 @@
             android:text="@string/btn_mais_6"
             android:textColor="@color/truco_texto"
             app:layout_constraintEnd_toStartOf="@+id/botaoJ2Mais9"
-            app:layout_constraintStart_toEndOf="@+id/botaoJ2Mais3"
+            app:layout_constraintStart_toEndOf="@id/botaoJ2Mais3"
             app:layout_constraintTop_toTopOf="@id/botaoJ2Mais1" />
 
         <Button
@@ -338,6 +338,7 @@
             android:text="@string/btn_hist_jogadas"
             android:textColor="@color/white"
             android:textSize="12sp"
+            app:backgroundTint="@color/truco_vermelho"
             app:layout_constraintEnd_toStartOf="@+id/botaoZerarHistorico"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
